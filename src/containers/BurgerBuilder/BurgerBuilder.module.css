@@ -1,0 +1,14 @@
+.Bodyy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) and (min-height: 400px) {
+  .Bodyy {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+}

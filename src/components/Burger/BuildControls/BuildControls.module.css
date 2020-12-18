@@ -1,0 +1,62 @@
+.BurgerControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  align-items: center;
+  background-color: rgb(255, 180, 118);
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+@media (min-width: 700px) and (min-height: 400px) {
+  .BurgerControls {
+    margin-top: 0;
+    margin-right: 50px;
+  }
+}
+
+.OrderButton {
+  background-color: #8dc731;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #966909;
+  margin: 15px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 30px;
+  box-shadow: 2px 2px 2px #00000085;
+}
+
+.OrderButton:hover,
+.OrderButton:active {
+  background-color: #83b13a;
+  border: 1px solid #966909;
+  color: #ffffff;
+}
+
+.OrderButton:disabled {
+  background-color: #c7c6c6;
+  cursor: not-allowed;
+  border: 1px solid #ccc;
+  color: #888888;
+}
+
+.OrderButton:not(:disabled) {
+  animation: enable 0.3s linear;
+}
+
+@keyframes enable {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
